@@ -125,7 +125,7 @@ fn env_var(name: &str) -> Option<String> {
 
 /// Runtime entry point to initialize the virtual file system.
 #[no_mangle]
-unsafe extern "C" fn __internal_wasi_vfs_rt_init() {
+pub unsafe extern "C" fn __internal_wasi_vfs_rt_init() {
     extern "C" {
         fn __wasi_vfs_force_link_init();
     }
